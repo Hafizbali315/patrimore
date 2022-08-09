@@ -1,26 +1,22 @@
-// import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 import { SiWhatsapp } from 'react-icons/si'
 import { BsChatRightDots, BsTelephone } from 'react-icons/bs'
 import FormInput from './../components/Contact/FormInput'
 
 const ContactPage = () => {
-	const formValue = {
+	const [formValue, setFormValue] = useState({
 		name: 'Escribe tu nombre y apellido',
 		email: 'Ej: micorreo@mail.com',
 		phone: 'Ej: +568038 84 94',
 		description: 'Describe tu situación actual',
+	})
+
+	const handleChange = (e) => {
+		setFormValue({
+			[e.target.name]: e.target.value,
+		})
 	}
-
-	// const handleChange = (e) => {
-	// 	setFormValue({
-	// 		[e.target.name]: e.target.value,
-	// 	})
-	// }
-
-	// useEffect(() => {
-	// 	console.log(formValue.description)
-	// }, [formValue])
 
 	return (
 		<div className="contact_page">
@@ -47,21 +43,13 @@ const ContactPage = () => {
 					</div>
 				</div>
 
-				<form
-					className="contact_form"
-					name="contact-v2"
-					action="/contact"
-					method="post"
-					netlify
-					// onSubmit="submit"
-					// data-netlify-honeypot="bot-field"
-				>
+				<form className="contact_form" name="contact-v2" action="/contact" method="post" netlify onSubmit="submit">
 					<input type="hidden" name="form-name" value="contact-v2" />
-					<FormInput type="text" name="name" id="name" label="Nombre y apellido" />
+					<FormInput type="text" name="name" id="name" value={formValue.name} handleChange={handleChange} label="Nombre y apellido" />
 
 					<div className="two_inputs">
-						<FormInput type="email" name="email" id="email" label="Correo" />
-						<FormInput type="tel" name="tel" id="tel" label="Télefono" />
+						<FormInput type="email" name="email" id="email" value={formValue.email} handleChange={handleChange} label="Correo" />
+						<FormInput type="tel" name="tel" id="tel" value={formValue.email} handleChange={handleChange} label="Télefono" />
 					</div>
 
 					<div className="text_area_input">
@@ -69,8 +57,8 @@ const ContactPage = () => {
 							<textarea
 								class="form-control"
 								placeholder={formValue.description}
-								// value={formValue.description}
-								// onChange={handleChange}
+								value={formValue.description}
+								onChange={handleChange}
 								id="text-area"
 								name="comments"
 							></textarea>
