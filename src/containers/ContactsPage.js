@@ -43,13 +43,13 @@ const ContactPage = () => {
 					</div>
 				</div>
 
-				<form className="contact_form" name="contact v1" method="post" data-netlify="true" onSubmit="submit">
-					<input type="hidden" name="form-name" value="contact v1" />
-					<FormInput type="text" value={formValue.name} handleChange={handleChange} label="Nombre y apellido" />
+				<form className="contact_form" name="contact v2" method="post" data-netlify="true" onSubmit="submit">
+					<input type="hidden" name="form-name" value="contact v2" />
+					<FormInput type="text" name="name" value={formValue.name} handleChange={handleChange} label="Nombre y apellido" />
 
 					<div className="two_inputs">
-						<FormInput type="email" value={formValue.email} handleChange={handleChange} label="Correo" />
-						<FormInput type="tel" value={formValue.phone} handleChange={handleChange} label="Télefono" />
+						<FormInput type="email" name="email" value={formValue.email} handleChange={handleChange} label="Correo" />
+						<FormInput type="tel" name="tel" value={formValue.phone} handleChange={handleChange} label="Télefono" />
 					</div>
 
 					<div className="text_area_input">
@@ -59,12 +59,13 @@ const ContactPage = () => {
 								placeholder={formValue.description}
 								value={formValue.description}
 								onChange={handleChange}
+								name="comments"
 							></textarea>
 							<label for="floatingTextarea2">Describe tu situación actual</label>
 						</div>
 					</div>
 
-					<button>Enviar</button>
+					<button type="submit">Enviar</button>
 				</form>
 			</div>
 		</div>
