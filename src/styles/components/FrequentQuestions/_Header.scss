@@ -1,0 +1,172 @@
+.frequent_questions_page {
+	.header {
+		display: flex;
+		min-height: 570px;
+		align-items: center;
+		gap: 10px;
+
+		.header_text {
+			width: 50%;
+
+			h6 {
+				font-weight: 600;
+				font-size: 20px;
+				line-height: 34px;
+				letter-spacing: -0.0066em;
+				color: #8e24aa;
+			}
+
+			h1 {
+				font-weight: 700;
+				font-size: 84px;
+				line-height: 89px;
+				letter-spacing: -0.04em;
+				color: #172635;
+				margin-top: 5px;
+			}
+
+			p {
+				font-weight: 400;
+				font-size: 20px;
+				line-height: 34px;
+				letter-spacing: -0.0066em;
+				color: #2c506b;
+				margin-top: 10px;
+
+				span {
+					text-decoration-line: underline;
+					color: #8e24aa;
+				}
+			}
+		}
+
+		.header_img {
+			width: 50%;
+			height: 100%;
+			margin-top: -100px;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+			}
+
+			img.sm {
+				display: none;
+			}
+		}
+	}
+}
+
+@include desktop-screen {
+	.frequent_questions_page {
+		.header {
+			min-height: 570px;
+
+			.header_text {
+				width: 45%;
+
+				h6 {
+					font-size: 18px;
+					line-height: 34px;
+				}
+
+				h1 {
+					font-size: 70px;
+					line-height: 80px;
+					margin-top: 5px;
+				}
+
+				p {
+					font-size: 18px;
+					line-height: 34px;
+					margin-top: 10px;
+				}
+			}
+
+			.header_img {
+				width: 55%;
+				margin-top: -100px;
+			}
+		}
+	}
+}
+
+@include laptop-screen {
+	.frequent_questions_page {
+		.header {
+			min-height: 570px;
+
+			.header_text {
+				width: 40%;
+
+				h6 {
+					font-size: 18px;
+					line-height: 34px;
+				}
+
+				h1 {
+					font-size: 60px;
+					line-height: 70px;
+					margin-top: 5px;
+				}
+
+				p {
+					font-size: 18px;
+					line-height: 34px;
+					margin-top: 10px;
+				}
+			}
+
+			.header_img {
+				width: 60%;
+				margin-top: -100px;
+			}
+		}
+	}
+}
+
+@include tablet-screen {
+	.frequent_questions_page {
+		.header {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			margin-top: 25px;
+
+			.header_text {
+				width: 100%;
+
+				h6 {
+					font-size: 18px;
+				}
+
+				h1 {
+					font-size: 50px;
+					line-height: 60px;
+					margin-top: 5px;
+				}
+
+				p {
+					font-size: 18px;
+					margin-top: 10px;
+				}
+			}
+
+			.header_img {
+				width: 100%;
+				max-width: 500px;
+				height: 100%;
+				margin-top: -120px;
+
+				img.lg {
+					display: none;
+				}
+
+				img.sm {
+					display: block;
+				}
+			}
+		}
+	}
+}

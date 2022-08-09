@@ -1,0 +1,50 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: $poppins, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+.link {
+	text-decoration: none;
+}
+
+.container_padding_x {
+	padding: 0 100px;
+}
+
+@include desktop-screen {
+	.container_padding_x {
+		padding: 0 80px;
+	}
+}
+
+@include laptop-screen {
+	.container_padding_x {
+		padding: 0 50px;
+	}
+}
+@include tablet-screen {
+	.container_padding_x {
+		padding: 0 24px;
+	}
+}

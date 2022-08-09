@@ -1,0 +1,162 @@
+.footer {
+	position: relative;
+
+	.content {
+		padding: 90px 0;
+
+		.row_top {
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+			gap: 10px;
+
+			.footer_col {
+				ul {
+					display: flex;
+					gap: 10px;
+					flex-direction: column;
+
+					li {
+						h6 {
+							font-weight: 700;
+							font-size: 16px;
+							line-height: 124.5%;
+							color: #172635;
+							margin-bottom: 10px;
+						}
+
+						.link {
+							font-weight: 400;
+							font-size: 16px;
+							line-height: 124.5%;
+							color: #2c506b;
+						}
+
+						.social_links {
+							display: flex;
+							align-items: center;
+							justify-content: space-between;
+							flex-direction: row;
+							gap: 15px;
+
+							li {
+								background: #ffffff;
+								box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.1);
+								width: 48px;
+								height: 48px;
+								border-radius: 50%;
+
+								display: flex;
+								align-items: center;
+								justify-content: center;
+
+								.link {
+									.icon {
+										color: #172635;
+										font-size: 20px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.row_bottom {
+			margin-top: 60px;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			gap: 200px;
+
+			p {
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 124.5%;
+				color: #2c506b;
+			}
+		}
+	}
+
+	.footer_bottom_bg {
+		position: absolute;
+		z-index: -1;
+		right: 0;
+		bottom: 0;
+	}
+}
+
+@include laptop-screen {
+	.footer {
+		.content {
+			.row_top {
+				.footer_col {
+					ul {
+						gap: 10px;
+
+						li {
+							h6 {
+								font-size: 16px;
+							}
+
+							.link {
+								font-size: 14px;
+							}
+
+							.social_links {
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@include tablet-screen {
+	.footer {
+		.content {
+			.row_top {
+				flex-direction: column;
+				gap: 40px;
+
+				.footer_col {
+					ul {
+						gap: 10px;
+
+						li {
+							h6 {
+								font-size: 18px;
+							}
+
+							.link {
+								font-size: 15px;
+							}
+						}
+					}
+				}
+			}
+
+			.row_bottom {
+				margin-top: 50px;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				gap: 25px;
+
+				p {
+					font-weight: 500;
+					font-size: 16px;
+					line-height: 124.5%;
+					text-align: center;
+					color: #2c506b;
+				}
+			}
+		}
+
+		.footer_bottom_bg {
+			display: none;
+		}
+	}
+}

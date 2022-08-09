@@ -1,0 +1,315 @@
+.contact_page {
+	.container_padding_x {
+		display: flex;
+		align-items: center;
+		margin-top: 80px;
+		gap: 20px;
+
+		.contact_text {
+			width: 50%;
+			height: auto;
+
+			h6 {
+				font-weight: 600;
+				font-size: 20px;
+				line-height: 34px;
+				letter-spacing: -0.0066em;
+				color: #8e24aa;
+			}
+
+			h1 {
+				font-weight: 700;
+				font-size: 84px;
+				line-height: 89px;
+				letter-spacing: -0.04em;
+				color: #172635;
+			}
+
+			.whatsapp {
+				margin-top: 40px;
+
+				display: flex;
+				align-items: center;
+				cursor: pointer;
+				gap: 12px;
+
+				.icon {
+					font-size: 25px;
+					color: #ff5e2c;
+				}
+
+				p {
+					font-weight: 400;
+					font-size: 18px;
+					line-height: 28px;
+					color: #8e24aa;
+				}
+			}
+
+			.chat {
+				display: flex;
+				align-items: center;
+				gap: 24px;
+				margin-top: 24px;
+
+				.write,
+				.call {
+					display: flex;
+					align-items: center;
+					gap: 12px;
+					cursor: pointer;
+
+					p {
+						font-weight: 400;
+						font-size: 18px;
+						line-height: 28px;
+						color: #8e24aa;
+					}
+				}
+
+				.icon {
+					font-size: 25px;
+					color: #ff5e2c;
+				}
+			}
+		}
+
+		.contact_form {
+			background: #ffffff;
+			border: 1px solid #e2e2ea;
+			border-radius: 10px;
+			width: 50%;
+			padding: 40px 24px 24px 24px;
+			height: auto;
+
+			.form-floating {
+				margin-bottom: 20px;
+
+				label {
+					font-size: 12px;
+				}
+
+				input {
+					background: #ffffff;
+					border: 1px solid #e2e2ea;
+					border-radius: 10px;
+					outline: none;
+
+					height: 60px;
+
+					font-size: 16px;
+					line-height: 24px;
+					color: #2c506b;
+
+					&:focus {
+						box-shadow: none;
+					}
+				}
+			}
+
+			.two_inputs {
+				display: flex;
+				gap: 17px;
+
+				.form-floating {
+					width: 50%;
+				}
+			}
+
+			.text_area_input {
+				textarea {
+					height: 200px;
+					background: #ffffff;
+					border: 1px solid #e2e2ea;
+					border-radius: 10px;
+					outline: none;
+
+					&:focus {
+						box-shadow: none;
+					}
+				}
+			}
+
+			button {
+				margin-top: 32px;
+				padding: 14.354px 66.3873px;
+				background: #8e24aa;
+				border: 1.79425px solid #8e24aa;
+				border-radius: 13.4569px;
+				color: #ffffff;
+				font-weight: 700;
+				font-size: 14.354px;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+@include laptop-screen {
+	.contact_page {
+		.container_padding_x {
+			margin-top: 80px;
+
+			.contact_text {
+				width: 50%;
+
+				h6 {
+					font-size: 18px;
+				}
+
+				h1 {
+					font-size: 70px;
+					line-height: 89px;
+				}
+
+				.whatsapp {
+					margin-top: 40px;
+
+					.icon {
+						font-size: 25px;
+					}
+
+					p {
+						font-size: 18px;
+					}
+				}
+
+				.chat {
+					gap: 24px;
+
+					.write,
+					.call {
+						p {
+							font-size: 18px;
+						}
+					}
+
+					.icon {
+						font-size: 25px;
+					}
+				}
+			}
+
+			.contact_form {
+				width: 50%;
+				padding: 40px 24px 24px 24px;
+
+				.form-floating {
+					input {
+						height: 60px;
+						font-size: 16px;
+						line-height: 24px;
+					}
+				}
+
+				.two_inputs {
+					gap: 17px;
+
+					.form-floating {
+						width: 50%;
+					}
+				}
+
+				.text_area_input {
+					textarea {
+						height: 200px;
+					}
+				}
+
+				button {
+					margin-top: 32px;
+					padding: 14.354px 66.3873px;
+					font-size: 14.354px;
+				}
+			}
+		}
+	}
+}
+
+@include tablet-screen {
+	.contact_page {
+		.container_padding_x {
+			margin-top: 30px;
+			flex-direction: column;
+
+			.contact_text {
+				width: 100%;
+
+				h6 {
+					font-size: 18px;
+				}
+
+				h1 {
+					font-size: 50px;
+					line-height: 60px;
+				}
+
+				.whatsapp {
+					margin-top: 40px;
+
+					.icon {
+						font-size: 25px;
+					}
+
+					p {
+						font-size: 18px;
+					}
+				}
+
+				.chat {
+					gap: 24px;
+					flex-direction: column;
+
+					.write,
+					.call {
+						width: 100%;
+						p {
+							font-size: 18px;
+						}
+					}
+
+					.icon {
+						font-size: 25px;
+					}
+				}
+			}
+
+			.contact_form {
+				margin-top: 20px;
+				width: 100%;
+				padding: 24px 16px 16px 16px;
+
+				.form-floating {
+					margin-bottom: 16px;
+					input {
+						height: 60px;
+						font-size: 16px;
+						line-height: 24px;
+					}
+				}
+
+				.two_inputs {
+					gap: 0;
+					flex-direction: column;
+
+					.form-floating {
+						width: 100%;
+					}
+				}
+
+				.text_area_input {
+					textarea {
+						height: 200px;
+					}
+				}
+
+				button {
+					margin-top: 32px;
+					padding: 14.354px 66.3873px;
+					font-size: 14.354px;
+					width: 100%;
+				}
+			}
+		}
+	}
+}

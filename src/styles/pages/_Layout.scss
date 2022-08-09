@@ -1,0 +1,15 @@
+.layout {
+	position: relative;
+
+	.top_bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		height: 600px;
+
+		img {
+			height: 100%;
+		}
+	}
+}

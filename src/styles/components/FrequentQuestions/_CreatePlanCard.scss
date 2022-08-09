@@ -1,0 +1,117 @@
+.create_plan_card {
+	margin: 100px 0;
+
+	.card {
+		background: #8e24aa;
+		border-radius: 129px 20px 20px 20px;
+		padding: 100px;
+		position: relative;
+
+		.content {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 20px;
+			z-index: 9;
+
+			.text {
+				color: #ffffff;
+
+				h1 {
+					font-weight: 700;
+					font-size: 50px;
+					line-height: 64px;
+					letter-spacing: -0.04em;
+				}
+
+				h6 {
+					margin-top: 20px;
+					font-weight: 600;
+					font-size: 20px;
+					line-height: 36px;
+				}
+
+				p {
+					font-weight: 500;
+					font-size: 16px;
+				}
+			}
+
+			button {
+				padding: 13.5617px 32.548px;
+				background: #ff5e2c;
+				border-radius: 135.617px;
+
+				font-weight: 400;
+				font-size: 18px;
+				color: #ffffff;
+				border: none;
+			}
+		}
+
+		.top_right_img {
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			right: 0;
+		}
+
+		.bottom_left_img {
+			position: absolute;
+			z-index: 1;
+			bottom: 0;
+			left: 0;
+		}
+
+		.send_icon_container {
+			position: absolute;
+			z-index: 2;
+			top: -20px;
+			right: -20px;
+			width: 60px;
+			height: 60px;
+			background: #ff5e2c;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			cursor: pointer;
+
+			.icon {
+				color: #ffffff;
+				font-size: 25px;
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+@include tablet-screen {
+	.create_plan_card {
+		margin: 80px 0;
+
+		.card {
+			border-radius: 50px 15px 15px 15px;
+			padding: 50px;
+
+			.content {
+				flex-direction: column;
+				gap: 20px;
+
+				.text {
+					h1 {
+						font-size: 40px;
+					}
+				}
+			}
+
+			.top_right_img {
+				display: none;
+			}
+
+			.bottom_left_img {
+				display: none;
+			}
+		}
+	}
+}
