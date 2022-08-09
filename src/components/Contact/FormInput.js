@@ -1,8 +1,8 @@
-const FormInput = ({ name, type, value, handleChange, label }) => {
+const FormInput = ({ name, id, type, value, label }) => {
 	return (
 		<div class="form-floating">
-			<input type={type} name={name} class="form-control" placeholder={value} value={value} onChange={handleChange} />
-			<label for="floatingInputInvalid">{label}</label>
+			<input id={id} type={type} name={name} class="form-control" placeholder={value} value={value} />
+			<label htmlFor={id}>{label}</label>
 		</div>
 	)
 }
