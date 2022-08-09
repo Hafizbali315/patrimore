@@ -50,10 +50,11 @@ const ContactPage = () => {
 				<form
 					className="contact_form"
 					name="contact-v2"
+					action="/contact"
 					method="post"
-					data-netlify="true"
-					onSubmit="submit"
-					data-netlify-honeypot="bot-field"
+					netlify
+					// onSubmit="submit"
+					// data-netlify-honeypot="bot-field"
 				>
 					<input type="hidden" name="form-name" value="contact-v2" />
 					<FormInput type="text" name="name" id="name" label="Nombre y apellido" />
